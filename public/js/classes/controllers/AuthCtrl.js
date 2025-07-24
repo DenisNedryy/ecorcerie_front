@@ -21,6 +21,7 @@ export class AuthCtrl {
     async inscription(data) {
         try {
             const result = await this.authModel.inscription(data);
+            console.log(result);
             if (result.ok) {
                 this.authView.showSuccess("Registration successful");
             } else {
