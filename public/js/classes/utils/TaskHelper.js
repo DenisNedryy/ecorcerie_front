@@ -7,7 +7,9 @@ export class TaskHelper {
     }
 
     getRdvs(tasks) {
-        return tasks.filter((task) => task.type === "rdvs");
+        if (tasks) {
+            return tasks.filter((task) => task.type === "rdvs");
+        }
     }
 
     getNextEvent(events) {
