@@ -68,8 +68,8 @@ const decompteEvents = new DecompteEvents();
 const homeAgendaRdv = new HomeAgendaRdv();
 
 
-const miseAJourAuth = new MiseAJourAuth(authServices);
-miseAJourAuth.init();
+// const miseAJourAuth = new MiseAJourAuth(authServices);
+// miseAJourAuth.init();
 
 const homeView = new HomeView();
 const homeEventBinder = new HomeEventBinder(homeView);
