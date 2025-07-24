@@ -1,0 +1,21 @@
+.btn {
+    padding: 15px;
+    border: none;
+    background-color: rgb(0, 95, 242);
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+/* spans  */
+.blue {
+    color: blue;
+}
+
+.bold {
+    font-weight: 600;
+}
