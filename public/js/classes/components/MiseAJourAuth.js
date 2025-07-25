@@ -6,7 +6,7 @@ export class MiseAJourAuth {
     }
 
     async getAuthUser() {
-        return await this.authServices.getAuth();
+        return await this.authServices.getAuth(); 
     }
 
 
