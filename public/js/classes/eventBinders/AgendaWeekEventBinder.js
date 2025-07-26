@@ -23,7 +23,7 @@ export class AgendaWeekEventBinder {
         }
 
         else if (e.target.classList.contains("previousWeek")) {
-            this.controller.agendaWeekModel.agendaWeekTurnLeft(); 
+            this.controller.agendaWeekModel.agendaWeekTurnLeft();
             this.controller.show();
         }
 
@@ -66,16 +66,17 @@ export class AgendaWeekEventBinder {
             const userIdSelected = this.controller.authServices.userIdSelected;
             const auth = await this.controller.authServices.getAuth();
             const task = this.controller.agendaWeekModel.getTaskObj(form, userIdSelected, auth);
-            if (task) { 
+            if (task) {
                 await this.controller.taskServices.createTask(task);
             }
             this.controller.show();
         }
 
         // focus modal 
-        else if (e.target.classList.contains("task")) {
-            const taskId = e.target.getAttribute("data-id");
-            if (taskId !== undefined && (!e.target.classList.contains("bgJaune") && !e.target.classList.contains("bgBlack"))) {
+        else if (e.target.classList.contains("task") || e.target.classList.contains("taskPara") || e.target.classList.contains("taskImg")) {
+            const el = e.target.closest("task");
+            const taskId = el.getAttribute("data-id");
+            if (taskId !== undefined && (!el.classList.contains("bgJaune") && !el.classList.contains("bgBlack"))) {
                 const taskRes = await this.controller.taskServices.readOneTask(taskId);
                 const task = taskRes.data.tasks;
                 this.controller.weekView.renderModalFocus(task);

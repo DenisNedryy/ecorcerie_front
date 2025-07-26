@@ -246,11 +246,11 @@ export class WeekView {
                         li.className = `${data[index].tasksByDay[i].bg} task`;
                         li.setAttribute("data-id", data[index].tasksByDay[i].id);
                         const para = document.createElement("p");
+                        para.className="taskPara";
                         para.textContent = data[index].tasksByDay[i].name;
                         if(data[index].tasksByDay[i].author_id){
                             const img = document.createElement("img");
-                            // le cjhoper dans le model pour l'associer à chaque task
-                            // choper le user associer à la task.author_id et choper son image, 
+                            img.className="taskImg"
                             img.setAttribute("src", `${HOST}/api/images/avatars/${data[index].tasksByDay[i].author_img_url}`);
                             li.appendChild(img);
                         }
