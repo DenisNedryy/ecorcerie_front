@@ -7,9 +7,6 @@ export class DateHelper {
     }
 
     sortTasksByDate(tasks) {
-        if(!tasks){
-            return [];
-        }
         return tasks.sort((a, b) => a.date.localeCompare(b.date));
     }
 

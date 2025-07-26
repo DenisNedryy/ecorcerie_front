@@ -1,12 +1,12 @@
 export class AuthCtrl {
 
-    constructor(authView, seoManager, authEventBinder, authModel, authServices ) {
+    constructor(authView, seoManager, authEventBinder, authModel, authServices, majAuth) {
         this.authView = authView;
         this.seoManager = seoManager;
         this.authEventBinder = authEventBinder;
         this.authModel = authModel;
         this.authServices = authServices;
-
+        this.majAuth = majAuth;
 
         // Liaison : le EventBinder saura appeler le contrôleur
         this.authEventBinder.setController(this);
@@ -21,7 +21,6 @@ export class AuthCtrl {
     async inscription(data) {
         try {
             const result = await this.authModel.inscription(data);
-            console.log(result);
             if (result.ok) {
                 this.authView.showSuccess("Registration successful");
             } else {
@@ -41,7 +40,7 @@ export class AuthCtrl {
                 this.authView.showSuccess("Connection successful");
                 const auth = await this.authServices.setCurrentUser();
                 this.authServices.userIdSelected = auth.id;
-          
+                this.majAuth.init();
             } else {
                 this.authView.showError(result.data?.msg || "Something went wrong.");
             }

@@ -1,15 +1,11 @@
 export class TaskHelper {
 
     getEvents(tasks) {
-        if (tasks) {
-            return tasks.filter((task) => task.type === "events");
-        }
+        return tasks.filter((task) => task.type === "events");
     }
 
     getRdvs(tasks) {
-        if (tasks) {
-            return tasks.filter((task) => task.type === "rdvs");
-        }
+        return tasks.filter((task) => task.type === "rdvs");
     }
 
     getNextEvent(events) {

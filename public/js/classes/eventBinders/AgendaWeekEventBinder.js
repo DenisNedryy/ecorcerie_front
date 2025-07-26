@@ -23,7 +23,7 @@ export class AgendaWeekEventBinder {
         }
 
         else if (e.target.classList.contains("previousWeek")) {
-            this.controller.agendaWeekModel.agendaWeekTurnLeft();
+            this.controller.agendaWeekModel.agendaWeekTurnLeft(); 
             this.controller.show();
         }
 
@@ -64,9 +64,9 @@ export class AgendaWeekEventBinder {
             e.preventDefault();
             const form = e.target.closest("form");
             const userIdSelected = this.controller.authServices.userIdSelected;
-            const auth = this.controller.authServices.getAuth();
+            const auth = await this.controller.authServices.getAuth();
             const task = this.controller.agendaWeekModel.getTaskObj(form, userIdSelected, auth);
-            if (task) {
+            if (task) { 
                 await this.controller.taskServices.createTask(task);
             }
             this.controller.show();
