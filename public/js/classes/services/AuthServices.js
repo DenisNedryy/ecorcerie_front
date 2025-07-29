@@ -12,7 +12,6 @@ export class AuthServices {
         }
     }
 
-
     async getUserById(id) {
         return await this.userServices.getOneUser(id);
     }
@@ -39,5 +38,13 @@ export class AuthServices {
         return authRes.data.user;
     }
 
-    
+    updateUser(data) {
+        return this.userServices.updateUser(data); 
+    }
+
+    updatePassword(data){
+        return this.userServices.updatePassword(data);
+    }
+
+
 }

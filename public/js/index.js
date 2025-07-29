@@ -6,6 +6,7 @@ import { YearView } from "./classes/components/YearView.js";
 import { PlanningView } from "./classes/components/PlanningView.js";
 import { MiseAJourAuth } from "./classes/components/MiseAJourAuth.js";
 import { HomeAlertView } from "./classes/components/HomeAlertView.js";
+import { ProfilFormView } from "./classes/components/ProfilFormView.js";
 
 // datas
 import { dailyPlanningTasks } from "./data/dailyPlanningTasks.js";
@@ -40,6 +41,7 @@ import { AuthView } from "./classes/views/AuthView.js";
 import { AgendaView } from "./classes/views/AgendaView.js";
 import { DailyPlanningView } from "./classes/views/DailyPlanningView.js";
 import { RestaurantsView } from "./classes/views/restaurantsView.js";
+import { ProfilView } from "./classes/views/ProfilView.js";
 
 // ctrls
 import { HomeCtrl } from "/public/js/classes/controllers/HomeCtrl.js";
@@ -47,6 +49,8 @@ import { AuthCtrl } from "./classes/controllers/AuthCtrl.js";
 import { AgendaCtrl } from "./classes/controllers/AgendaCtrl.js";
 import { DailyPlanningCtrl } from "./classes/controllers/DailyPlanningCtrl.js";
 import { RestaurantsCtrl } from "./classes/controllers/RestaurantsCtrl.js";
+import { HeaderCtrl } from "./classes/controllers/HeaderCtrl.js";
+import { ProfilCtrl } from "./classes/controllers/ProfilCtrl.js";
 
 // eventBinder
 import { HomeEventBinder } from "./classes/eventBinders/homeEventBinder.js";
@@ -56,6 +60,8 @@ import { AgendaWeekEventBinder } from "./classes/eventBinders/AgendaWeekEventBin
 import { AgendaYearEventBinder } from "./classes/eventBinders/AgendaYearEventBinder.js";
 import { AgendaPlanningEventBinder } from "./classes/eventBinders/AgendaPlanningEventBinder.js";
 import { DailyPlanningEventBinder } from "./classes/eventBinders/DailyPlanningEventBinder.js";
+import { HeaderEventBinder } from "./classes/eventBinders/HeaderEventBinder.js";
+import { ProfilEventBinder } from "./classes/eventBinders/ProfilEventBinder.js";
 
 const seoManager = new SEOManager();
 const userServices = new UserServices();
@@ -73,6 +79,10 @@ const homeAlertView = new HomeAlertView();
 
 const miseAJourAuth = new MiseAJourAuth(authServices);
 miseAJourAuth.init();
+
+const headerEventBinder = new HeaderEventBinder(userServices, miseAJourAuth);
+const headerCtrl = new HeaderCtrl(headerEventBinder);
+headerCtrl.init();
 
 const homeView = new HomeView();
 const homeEventBinder = new HomeEventBinder(homeView);
@@ -106,14 +116,18 @@ const restaurantsView = new RestaurantsView(restaurants);
 const restaurantsCtrl = new RestaurantsCtrl(restaurantsView, seoManager);
 
 
-
+const profilView = new ProfilView();
+const profilFormView = new ProfilFormView();
+const profilEventBinder = new ProfilEventBinder(profilView);
+const profilCtrl = new ProfilCtrl(profilView, seoManager, profilEventBinder, authServices, miseAJourAuth, profilFormView);
 
 const routes = {
     "home": homeCtrl,
     "auth": authCtrl,
     "agenda": agendaCtrl,
     "planning": dailyPlanningCtrl,
-    "restaurants": restaurantsCtrl
+    "restaurants": restaurantsCtrl,
+    "profil": profilCtrl
 }
 
 const navHighLighter = new NavHighLighter();
