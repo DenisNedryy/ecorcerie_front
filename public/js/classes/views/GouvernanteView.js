@@ -54,7 +54,7 @@ export class GouvernanteView {
         li.innerHTML = `
         <p class="check"></p>
         <p>${rooms[i].type}</p>
-        <p>${rooms[i].roomNum === 15 ? "Appart" : rooms[i].roomNum === 14 ? '14 / 1-bis' : rooms[i].roomNum}</p>
+        <p>${rooms[i].roomNum === 15 ? "Appart" : rooms[i].roomNum===16? "Studio" :  rooms[i].roomNum === 14 ? '14 / 1-bis' : rooms[i].roomNum}</p>
         <p>${rooms[i].clientName}</p>
         <p>${rooms[i].clientPhone}</p>
         <p>${rooms[i].nbClient}</p>
