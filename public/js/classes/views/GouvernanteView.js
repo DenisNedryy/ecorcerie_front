@@ -41,7 +41,7 @@ export class GouvernanteView {
       <li>Phone</li>
       <li>Nb clients</li>
       <li>Source</li>
-      <p>Recouche</p>
+      <li>Recouche</li>
       <li>Extra</li>
       `;
       container.appendChild(header);
