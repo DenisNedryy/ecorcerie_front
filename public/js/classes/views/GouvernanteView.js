@@ -39,7 +39,7 @@ export class GouvernanteView {
       <li class="li-num">N°</li>
       <li class="li-name">name</li> 
       <li class="li-phone">Phone</li>
-      <li class="li--nbClient">Nb clients</li>
+      <li class="li-nbClient">Nb clients</li>
       <li class="li-source">Source</li>
       <li class="li-recouche">Recouche</li>
       <li class="li-keys">Clefs</li>
@@ -62,6 +62,7 @@ export class GouvernanteView {
         <p class="nbClient">${rooms[i].nbClient}</p>
         <p class="source">${rooms[i].source}</p> 
         <p class="recouche"></p>
+        <p class="keys"></p>
         <p class="extra">${rooms[i].extras}</p>
         `;
         fiche.appendChild(li);
