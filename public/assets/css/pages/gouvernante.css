@@ -2,7 +2,8 @@
     background-color: white;
     color: black;
     margin-top: 15px;
-    width: 1410px;
+width: 1408px;
+  border-top: 1px solid black;
 }
 
 .gourvernante__header {
@@ -11,6 +12,7 @@
     border: 1px solid rgba(0, 0, 0, .6);
     text-transform: capitalize;
     font-weight: 600;
+    width: 1408px;
 }
 
 .gourvernante__header li {
@@ -55,6 +57,7 @@
 .gourvernante__fiches {
     display: flex;
     flex-direction: column;
+    width: 1408px;
 }
 
 .gourvernante__fiches li {
