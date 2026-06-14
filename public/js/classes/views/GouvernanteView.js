@@ -55,7 +55,7 @@ export class GouvernanteView {
         li.className = `${rooms[i].type === "" ? "virgin" : (rooms[i].type === "Checks-ins" ? "checksIn" : "surPlace")}`
         li.innerHTML = `
         <p class="check"></p>
-        <p>${rooms[i].type}</p>
+        <p class="type">${rooms[i].type}</p>
         <p class="roomNum">${rooms[i].roomNum === 15 ? "Appart" : rooms[i].roomNum===17? "Studio" :  rooms[i].roomNum === 14 ? '14 / 1-bis' : rooms[i].roomNum}</p>
         <p>${rooms[i].clientName}</p>
         <p>${rooms[i].clientPhone}</p>
