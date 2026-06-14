@@ -2,6 +2,7 @@
     background-color: white;
     color: black;
     margin-top: 15px;
+    width: 1410px;
 }
 
 .gourvernante__header {
@@ -46,6 +47,9 @@
 }
 .li-extra, .extra{
     width: 215px;
+}
+.li-notes, .notes{
+    width: 250px;
 }
 
 .gourvernante__fiches {
