@@ -23,8 +23,8 @@
 .li-type, .type{
    width: 102px;
 }
-.li-num{
-  width: 173px;
+.li-num, .roomNum{
+  width: 83px;
 }
 .li-name{
     width: 171px;
