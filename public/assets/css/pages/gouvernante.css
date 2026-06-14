@@ -13,10 +13,39 @@
 }
 
 .gourvernante__header li {
-    width: calc(100% / 9);
     border-right: 1px solid rgba(0, 0, 0, .6);
     padding: 5px;
     background-image: url("../../images/bg/bg_blue.png");
+}
+.li-chek, .check{
+    width: 58px;
+}
+.li-type, .type{
+   width: 172px;
+}
+.li-num{
+  width: 173px;
+}
+.li-name{
+    width: 171px;
+}
+.li-phone{
+    width: 30px;
+}
+.li-nbClient{
+    width: 30px;
+}
+.li-source{
+    width: 30px;
+}
+.li-recouche{
+    width: 30px;
+}
+.li-keys{
+    width: 30px;
+}
+.li-extra{
+    width: 30px;
 }
 
 .gourvernante__fiches {
