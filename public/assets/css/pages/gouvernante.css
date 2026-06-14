@@ -26,23 +26,23 @@
 .li-num, .roomNum{
   width: 83px;
 }
-.li-name{
-    width: 171px;
+.li-name, .clientName{
+    width: 200px;
 }
-.li-phone{
+.li-phone, .clientPhone{
+    width: 140px;
+}
+.li-nbClient, .nbClient{
     width: 30px;
 }
-.li-nbClient{
-    width: 30px;
+.li-source, .source{
+    width: 110px;
 }
-.li-source{
-    width: 30px;
+.li-recouche, .recouche{
+    width: 88px;
 }
-.li-recouche{
-    width: 30px;
-}
-.li-keys{
-    width: 30px;
+.li-keys, .keys{
+    width: 60px;
 }
 .li-extra{
     width: 30px;
