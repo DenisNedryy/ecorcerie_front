@@ -57,12 +57,12 @@ export class GouvernanteView {
         <p class="check"></p>
         <p class="type">${rooms[i].type}</p>
         <p class="roomNum">${rooms[i].roomNum === 15 ? "Appart" : rooms[i].roomNum===17? "Studio" :  rooms[i].roomNum === 14 ? '14 / 1-bis' : rooms[i].roomNum}</p>
-        <p>${rooms[i].clientName}</p>
-        <p>${rooms[i].clientPhone}</p>
+        <p class="clientName">${rooms[i].clientName}</p>
+        <p class="clientPhone">${rooms[i].clientPhone}</p>
         <p class="nbClient">${rooms[i].nbClient}</p>
-        <p>${rooms[i].source}</p> 
+        <p class="source">${rooms[i].source}</p> 
         <p class="recouche"></p>
-        <p>${rooms[i].extras}</p>
+        <p class="extra">${rooms[i].extras}</p>
         `;
         fiche.appendChild(li);
       }
