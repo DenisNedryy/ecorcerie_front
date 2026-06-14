@@ -64,6 +64,7 @@ export class GouvernanteView {
         <p class="recouche"></p>
         <p class="keys"></p>
         <p class="extra">${rooms[i].extras}</p>
+        <p class="notes"></p>
         `;
         fiche.appendChild(li);
       }
