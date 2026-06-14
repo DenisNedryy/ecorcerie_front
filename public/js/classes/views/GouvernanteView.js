@@ -34,16 +34,16 @@ export class GouvernanteView {
       const header = document.createElement("ul");
       header.className = "gourvernante__header";
       header.innerHTML = `
-      <li>Check</li>
-      <li>Type</li>
-      <li>N°</li>
-      <li>name</li> 
-      <li>Phone</li>
-      <li>Nb clients</li>
-      <li>Source</li>
-      <li>Recouche</li>
-      <li>Clefs</li>
-      <li>Extra</li>
+      <li class="li-chek">Check</li>
+      <li class="li-type">Type</li>
+      <li class="li-num">N°</li>
+      <li class="li-name">name</li> 
+      <li class="li-phone">Phone</li>
+      <li class="li--nbClient">Nb clients</li>
+      <li class="li-source">Source</li>
+      <li class="li-recouche">Recouche</li>
+      <li class="li-keys">Clefs</li>
+      <li class="li-extra">Extra</li>
       `;
       container.appendChild(header);
       const fiche = document.createElement("ul");
