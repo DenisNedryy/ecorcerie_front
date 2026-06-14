@@ -56,12 +56,12 @@ export class GouvernanteView {
         li.innerHTML = `
         <p class="check"></p>
         <p>${rooms[i].type}</p>
-        <p>${rooms[i].roomNum === 15 ? "Appart" : rooms[i].roomNum===17? "Studio" :  rooms[i].roomNum === 14 ? '14 / 1-bis' : rooms[i].roomNum}</p>
+        <p class="roomNum">${rooms[i].roomNum === 15 ? "Appart" : rooms[i].roomNum===17? "Studio" :  rooms[i].roomNum === 14 ? '14 / 1-bis' : rooms[i].roomNum}</p>
         <p>${rooms[i].clientName}</p>
         <p>${rooms[i].clientPhone}</p>
-        <p>${rooms[i].nbClient}</p>
+        <p class="nbClient">${rooms[i].nbClient}</p>
         <p>${rooms[i].source}</p> 
-        <p></p>
+        <p class="recouche"> <input type="checkbox"></p>
         <p>${rooms[i].extras}</p>
         `;
         fiche.appendChild(li);
