@@ -44,6 +44,7 @@ export class GouvernanteView {
       <li class="li-recouche">Recouche</li>
       <li class="li-keys">Clefs</li>
       <li class="li-extra">Extra</li>
+      <li class="li-notes">Notes</li>
       `;
       container.appendChild(header);
       const fiche = document.createElement("ul");
