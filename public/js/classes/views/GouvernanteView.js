@@ -41,6 +41,7 @@ export class GouvernanteView {
       <li>Phone</li>
       <li>Nb clients</li>
       <li>Source</li>
+      <li>Recouche</li>
       <li>Clefs</li>
       <li>Extra</li>
       `;
