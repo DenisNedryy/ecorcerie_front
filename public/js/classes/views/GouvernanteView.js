@@ -61,7 +61,7 @@ export class GouvernanteView {
         <p>${rooms[i].clientPhone}</p>
         <p class="nbClient">${rooms[i].nbClient}</p>
         <p>${rooms[i].source}</p> 
-        <p class="recouche"> <input type="checkbox"></p>
+        <p class="recouche"></p>
         <p>${rooms[i].extras}</p>
         `;
         fiche.appendChild(li);
